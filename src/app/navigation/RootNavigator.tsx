@@ -12,18 +12,19 @@ export function RootNavigator() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerStyle: { backgroundColor: '#a39e9eff' },
+          headerStyle: { backgroundColor: '#EAD1CB' },
           headerTitleStyle: { fontWeight: '600' },
+          headerTitleAlign: 'center',
         }}>
         <Stack.Screen
           name="CountriesList"
           component={CountriesListScreen}
-          options={{ title: 'Countries' }}
+          options={{ title: 'Countries', headerTintColor: '#000000' }}
         />
         <Stack.Screen
           name="CountryDetail"
           component={CountryDetailScreen}
-          options={{ title: 'Country detail' }}
+          options={{ title: 'Details' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

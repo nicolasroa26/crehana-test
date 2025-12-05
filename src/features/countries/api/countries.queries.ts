@@ -7,6 +7,10 @@ export const GET_COUNTRIES = gql`
       name
       currency
       capital
+      languages {
+        code
+        name
+      }
       continent {
         code
         name
@@ -23,6 +27,10 @@ export const GET_COUNTRY = gql`
       currency
       capital
       continent {
+        code
+        name
+      }
+      languages {
         code
         name
       }
