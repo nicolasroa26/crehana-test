@@ -1,13 +1,13 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
+import React from 'react';
+import { ApolloProvider } from '@apollo/client/react';
+import { graphqlClient } from '@/core/services/graphql/client';
+import { RootNavigator } from '@/app/navigation/RootNavigator';
 import './global.css';
 
 export default function App() {
   return (
-    <>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </>
+    <ApolloProvider client={graphqlClient}>
+      <RootNavigator />
+    </ApolloProvider>
   );
 }
